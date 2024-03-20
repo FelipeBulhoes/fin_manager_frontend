@@ -27,7 +27,7 @@ const createTransaction = (event: MouseEvent) => {
       emit('transactionCreated', res.data)
     })
     .catch((err) => {
-      alert('Erro ao criar transação')
+      alert('Erro ao criar transação. Verifique se todos os campos foram preenchidos corretamente.')
       console.log(err)
     })
 }

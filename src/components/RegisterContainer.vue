@@ -18,7 +18,7 @@ const register = () => {
       alert('Usuário criado com sucesso!')
     })
     .catch((err) => {
-      alert('Erro ao criar usuário')
+      alert('Erro ao criar usuário, verifique se o backend está rodando na porta 8000')
       console.log(err)
     })
   // colocar icone de certinho no botao do loading
