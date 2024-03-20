@@ -1,39 +1,42 @@
-# fin_manager_frontend
 
-This template should help get you started developing with Vue 3 in Vite.
+# FIN_MANAGER_FRONTEND
 
-## Recommended IDE Setup
+This is a frontend application made with Vue.js to handle user authentication alongside income and expenses transactions. The backend service for this application can be found on my github profile.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
 
-## Type Support for `.vue` Imports in TS
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
+## Run Locally
 
-## Customize configuration
+Clone the project
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-yarn
+```bash
+  git clone git@github.com:FelipeBulhoes/fin_manager_frontend.git
 ```
 
-### Compile and Hot-Reload for Development
+Go to the project directory
 
-```sh
-yarn dev
+```bash
+  cd fin_manager_frontend
 ```
 
-### Type-Check, Compile and Minify for Production
+Install dependencies
 
-```sh
-yarn build
+```bash
+  yarn  |  npm install
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+Run (dev mode)
 
-```sh
-yarn lint
+```bash
+  yarn dev | npm run dev
 ```
+
+Also you can lint with ESlint
+```bash
+  yarn lint | npm run lint
+```
+
+The app should now be running on http://localhost:5173
+
+(Attention) Make sure the backend is running on port 8000 as the frontend app is configured to access this port.
+
