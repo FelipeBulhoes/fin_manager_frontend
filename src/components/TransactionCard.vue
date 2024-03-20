@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import axios from 'axios'
-import { defineEmits } from 'vue'
 
 const { transaction } = defineProps(['transaction'])
 
@@ -25,7 +24,7 @@ const deleteTransaction = async () => {
     .then(() => {
       emit('transactionDeleted', transaction.id)
     })
-    .catch((err) => {
+    .catch(() => {
       alert('Erro ao deletar transação')
     })
 }

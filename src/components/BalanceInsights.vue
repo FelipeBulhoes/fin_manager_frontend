@@ -1,7 +1,4 @@
 <script setup lang="ts">
-import axios from 'axios'
-import { defineProps } from 'vue'
-
 const { balance } = defineProps(['balance'])
 
 const formatCurrency = (value: number) => {

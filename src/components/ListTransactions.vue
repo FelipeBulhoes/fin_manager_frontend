@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import axios from 'axios'
-import { defineProps, defineEmits } from 'vue'
 import TransactionCard from '@/components/TransactionCard.vue'
 import EmptyWarn from '@/components/EmptyWarn.vue'
 
@@ -18,13 +16,14 @@ const moveDeleteEvent = (id: number) => {
     <div class="list-inner">
       <h2>Transactions</h2>
       <ul>
-        <TransactionCard
-          v-for="item in transactions"
-          v-if="transactions.length > 0"
-          :transaction="item"
-          :key="item.id"
-          @transactionDeleted="(id: number) => moveDeleteEvent(id)"
-        />
+        <template v-if="transactions.length > 0">
+          <TransactionCard
+            v-for="item in transactions"
+            :key="item.id"
+            :transaction="item"
+            @transactionDeleted="(id) => moveDeleteEvent(id)"
+          />
+        </template>
         <EmptyWarn v-else />
       </ul>
     </div>

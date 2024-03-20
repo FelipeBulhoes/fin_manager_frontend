@@ -14,7 +14,7 @@ const register = () => {
 
   axios
     .post('http://localhost:8000/users/create/', registerInfo.value)
-    .then((res) => {
+    .then(() => {
       alert('Usuário criado com sucesso!')
     })
     .catch((err) => {

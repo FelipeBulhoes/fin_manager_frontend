@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import Header from '@/components/Header.vue'
+import AppHeader from '@/components/AppHeader.vue'
 import CreateTransaction from '@/components/CreateTransaction.vue'
 import ListTransactions from '@/components/ListTransactions.vue'
-import Insights from '@/components/Insights.vue'
-import { ref, onMounted, onBeforeMount } from 'vue'
+import BalanceInsights from '@/components/BalanceInsights.vue'
+import { ref, onMounted } from 'vue'
 import type { Ref } from 'vue'
 import axios from 'axios'
 
@@ -28,18 +28,6 @@ export interface iBalance {
 
 const transactions: Ref<iTransaction[]> = ref([])
 const balance: Ref<iBalance> = ref({} as iBalance)
-
-// let token: string
-
-// onBeforeMount(() => {
-//   const authtoken = localStorage.getItem('token')
-
-//   if (authtoken) {
-//     token = authtoken
-//   }
-
-//   window.location.href = '/login'
-// })
 
 const insertNewTransaction = async (transaction: any) => {
   transactions.value.push(transaction)
@@ -86,7 +74,7 @@ onMounted(async () => {
 </script>
 
 <template>
-  <Header></Header>
+  <AppHeader />
   <main>
     <section>
       <CreateTransaction
@@ -100,7 +88,7 @@ onMounted(async () => {
       />
     </section>
     <section>
-      <Insights :balance="balance" />
+      <BalanceInsights :balance="balance" />
     </section>
   </main>
 </template>

@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import axios from 'axios'
-import { defineEmits } from 'vue'
 
 const emit = defineEmits(['transactionCreated'])
 
